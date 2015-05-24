@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="de.netallied.functionblock.core.resEditorParts">
+      <editor
+            class="de.netallied.functionblock.modeleditor.res.properties.Editor"
+            sortIndex="20"/>
+   </extension>
+
+</plugin>

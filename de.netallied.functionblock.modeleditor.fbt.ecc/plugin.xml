@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="de.netallied.functionblock.core.fbtEditorParts">
+      <editor
+            class="de.netallied.functionblock.modeleditor.fbt.ecc.Editor"
+            type="basic"
+            sortIndex="40"/>
+   </extension>
+
+	<extension point="org.eclipse.ui.popupMenus">
+   
+    <objectContribution
+          objectClass="de.netallied.functionblock.editor.ecc.editparts.StateActionEditPart"
+          id="de.netallied.functionblock.editor.ecc.editparts.StateActionEditPart">
+    </objectContribution>
+
+
+    <objectContribution
+          objectClass="de.netallied.functionblock.editor.ecc.editparts.StateEditPart"
+          id="de.netallied.functionblock.editor.ecc.editparts.StateEditPart">
+    </objectContribution>
+
+  </extension>
+
+</plugin>

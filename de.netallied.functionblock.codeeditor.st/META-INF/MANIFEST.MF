@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IEC61499 Editor for ST Language Plug-in
+Bundle-SymbolicName: de.netallied.functionblock.codeeditor.st;singleton:=true
+Bundle-Version: 1.0.6
+Bundle-Activator: de.netallied.functionblock.codeeditor.st.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ de.netallied.functionblock.core
+Eclipse-LazyStart: true
+Bundle-Vendor: NetAllied
+Bundle-ClassPath: classes/,
+ .

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension point="org.eclipse.ui.editors">
+
+      <editor
+            class="de.netallied.functionblock.modeleditor.dev.MultiPageEditor"
+            extensions="dev"
+            icon="icons/editor.png"
+            id="de.netallied.functionblock.modeleditor.dev.MultiPageEditor"
+            name="IEC 61499 Device Editor">
+      </editor>
+
+   </extension>
+
+	<extension point="org.eclipse.ui.popupMenus">
+   
+  </extension>
+
+</plugin>

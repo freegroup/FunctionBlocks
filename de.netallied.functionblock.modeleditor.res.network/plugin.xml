@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="de.netallied.functionblock.core.resEditorParts">
+      <editor
+            class="de.netallied.functionblock.modeleditor.res.network.Editor"
+            type="composite"
+            sortIndex="30"/>
+   </extension>
+
+
+
+  <extension point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          objectClass="de.netallied.functionblock.modeleditor.res.network.editpart.InputValueModelEditPart"
+          id="de.netallied.functionblock.modeleditor.res.network.editpart.InputValueModelEditPart">
+
+       <action
+          label="%popup.connect"
+          icon="icons/editor_code.gif"
+          class="de.netallied.functionblock.modeleditor.res.network.action.SetParameterAction"
+          menubarPath="org.eclipse.gef.group.edit"
+          id="de.netallied.functionblock.modeleditor.res.network.action.SetParameterAction"/>
+        <visibility>
+         <objectState name="fanIn" value="1"/>
+        </visibility>
+    </objectContribution>
+  </extension>
+</plugin>

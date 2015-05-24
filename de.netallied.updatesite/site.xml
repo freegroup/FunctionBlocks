@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.netallied.feature_1.0.22.jar" id="de.netallied.feature" version="1.0.22">
+      <category name="IEC 61499 Automation Objects"/>
+   </feature>
+   <category-def name="IEC 61499 Automation Objects" label="IEC 61499 AutomationObjects"/>
+</site>

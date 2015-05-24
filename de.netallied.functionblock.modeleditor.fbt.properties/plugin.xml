@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="de.netallied.functionblock.core.fbtEditorParts">
+      <editor
+            class="de.netallied.functionblock.modeleditor.fbt.properties.Editor"
+            type="composite"
+            sortIndex="10"/>
+      <editor
+            class="de.netallied.functionblock.modeleditor.fbt.properties.Editor"
+            type="basic"
+            sortIndex="10"/>
+
+      <editor
+            class="de.netallied.functionblock.modeleditor.fbt.properties.Editor"
+            type="systeminterface"
+            sortIndex="10"/>
+   </extension>
+
+</plugin>

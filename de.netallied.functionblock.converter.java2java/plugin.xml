@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="de.netallied.functionblock.core.generators">
+      <factory 
+            class="de.netallied.functionblock.converter.java2java.GeneratorFactory"
+            sourceLanguage="java"
+            targetLanguage="java">
+       </factory>
+   </extension>
+
+</plugin>

@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IEC61499 Converter for Java2java Plug-in
+Bundle-SymbolicName: de.netallied.functionblock.converter.java2java;singleton:=true
+Bundle-Version: 1.0.5
+Bundle-Activator: de.netallied.functionblock.converter.java2java.Activator
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.jdt,
+ org.eclipse.jdt.core,
+ de.netallied.functionblock.core
+Eclipse-LazyStart: true
+Bundle-ClassPath: lib/commons-collections.jar,
+ lib/commons-discovery.jar,
+ lib/commons-io.jar,
+ lib/commons-lang.jar,
+ lib/commons-logging.jar,
+ lib/commons-validator-1.1.4.jar,
+ lib/velocity-1.4.jar,
+ lib/velocity-dep-1.4.jar,
+ lib/forms-1.0.7.jar,
+ classes/
+Bundle-Vendor: NetAllied

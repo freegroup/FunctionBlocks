@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="de.netallied.functionblock.workspace"
+            name="IEC61499"/>
+      <view
+            category="de.netallied.functionblock.workspace"
+            class="de.netallied.functionblock.workspace.views.ProjectView"
+            icon="icons/sample.gif"
+            id="de.netallied.functionblock.workspace.views.ProjectView"
+            name="IEC 61499 Project View"/>
+   </extension>
+
+</plugin>

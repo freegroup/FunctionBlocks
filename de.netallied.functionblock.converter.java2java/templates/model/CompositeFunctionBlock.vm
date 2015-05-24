@@ -1,0 +1,108 @@
+/**************************************************************************
+ * Project  : jacob.$application.name
+ * Date     : $date
+ * 
+ * THIS IS A GENERATED FILE - DO NOT CHANGE!
+ *
+ *************************************************************************/
+package test;
+
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+import javax.swing.WindowConstants;
+
+import iec61499.runtime.*;
+import iec61499.runtime.datatype.*;
+
+public final class $StringUtils.capitalise($model.functionBlockModel.name) extends CompositeFunctionBlock
+{
+#foreach( $input in $model.functionBlockModel.inputEventModels )
+	public final EVENT  _$input.name.toUpperCase();  
+#end
+#foreach( $output in $model.functionBlockModel.outputEventModels )
+	public final EVENT  _$output.name.toUpperCase();  
+#end
+#foreach( $input in $model.functionBlockModel.inputValueModels )
+	public final $input.type _$input.name.toUpperCase();  
+#end
+#foreach( $output in $model.functionBlockModel.outputValueModels )
+	public final $output.type _$output.name.toUpperCase();  
+#end
+
+#foreach( $output in $model.functionBlockModel.instanceElements )
+	public final BasicFunctionBlock _$output.name;  
+#end
+	public final CompositeFunctionBlock _$StringUtils.capitalise($model.functionBlockModel.name);
+	 
+	public $StringUtils.capitalise($model.functionBlockModel.name)()
+	{
+		super("$StringUtils.capitalise($model.functionBlockModel.name)");
+#foreach( $input in $model.functionBlockModel.inputEventModels )
+		_$input.name.toUpperCase() = new EVENT(this, "$input.name",true);  
+#end
+#foreach( $output in $model.functionBlockModel.outputEventModels )
+		_$output.name.toUpperCase() = new EVENT(this,"$output.name",false);  
+#end
+#foreach( $input in $model.functionBlockModel.inputValueModels )
+		_$input.name.toUpperCase() = new $input.type (this,"$input.name",true);  
+#end
+#foreach( $output in $model.functionBlockModel.outputValueModels )
+		_$output.name.toUpperCase() = new $output.type (this,"$output.name",false);  
+#end
+
+		_$StringUtils.capitalise($model.functionBlockModel.name) = this;
+#foreach( $instance in $model.functionBlockModel.instanceElements )
+		_$instance.name = new $instance.type ();
+#end
+
+#foreach( $trans in $model.functionBlockModel.eventTransitions )
+		_$trans.fromObjectModel.parentNameProvider.name .getEvent("$trans.fromObjectModel.name").addPropertyChangeListener(_$trans.toObjectModel.parentNameProvider.name .getEvent ("$trans.toObjectModel.name"));
+#end
+
+
+#foreach( $trans in $model.functionBlockModel.valueTransitions )
+		_$trans.fromObjectModel.parentNameProvider.name .getValue("$trans.fromObjectModel.name").addPropertyChangeListener(_$trans.toObjectModel.parentNameProvider.name .getValue ("$trans.toObjectModel.name"));
+#end
+
+	}
+	
+	public void tick()
+	{
+#foreach( $input in $model.functionBlockModel.inputValueModels )
+		_$input.name.toUpperCase() .commit();  
+#end
+#foreach( $output in $model.functionBlockModel.outputValueModels )
+		_$output.name.toUpperCase() .commit();  
+#end
+#foreach( $instance in $model.functionBlockModel.instanceElements )
+		_$instance.name .tick();
+#end
+	}	
+
+	/**
+	 *
+	 * ONLY FOR TEST
+	 *
+	 **/
+   public static void main(String[] args) 
+   {
+     try 
+     {
+       UIManager.setLookAndFeel("com.jgoodies.looks.plastic.PlasticXPLookAndFeel");
+     } 
+     catch (Exception e) 
+     {
+         // Likely PlasticXP is not in the class path; ignore.
+     }
+     JFrame frame = new JFrame();
+     $StringUtils.capitalise($model.functionBlockModel.name) fb =new $StringUtils.capitalise($model.functionBlockModel.name) ();
+     frame.setTitle("Functionblock Test Enviroment");
+     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+     JComponent panel = fb.buildPanel();
+     frame.getContentPane().add(panel);
+     frame.pack();
+     new Thread(fb).start();
+     frame.setVisible(true);
+   }
+}

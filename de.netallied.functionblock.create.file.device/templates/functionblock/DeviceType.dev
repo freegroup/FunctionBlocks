@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE DeviceType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<DeviceType Name="{name}" Comment="Device '{name}'" >
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="NetAllied" Version="0.1" Author="{author}" Date="{date}" Remarks="Initial creation." />
+  <CompilerInfo header="" >
+  </CompilerInfo>
+</DeviceType>

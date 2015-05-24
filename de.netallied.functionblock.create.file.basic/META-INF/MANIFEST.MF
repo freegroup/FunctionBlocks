@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: New Basic Function Block Wizard Plug-in
+Bundle-SymbolicName: de.netallied.functionblock.create.file.basic; singleton:=true
+Bundle-Version: 1.0.6
+Bundle-Activator: de.netallied.functionblock.create.file.basic.Activator
+Bundle-Vendor: NetAllied
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ de.netallied.functionblock.core
+Eclipse-LazyStart: true
+Bundle-ClassPath: lib/commons-io.jar,
+ .,
+ classes/

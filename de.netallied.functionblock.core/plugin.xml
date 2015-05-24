@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension-point id="codeEditors"    name="Source code editors"   schema="schema/codeEditors.exsd"/>
+   <extension-point id="generators"     name="Source code converter" schema="schema/generators.exsd"/>
+   <extension-point id="fbtEditorParts" name="FBT Editor tab panes"  schema="schema/fbtEditorParts.exsd"/>
+   <extension-point id="resEditorParts" name="RES Editor tab panes"  schema="schema/resEditorParts.exsd"/>
+   <extension-point id="sysEditorParts" name="SYS Editor tab panes"  schema="schema/sysEditorParts.exsd"/>
+   <extension-point id="devEditorParts" name="DEV Editor tab panes"  schema="schema/devEditorParts.exsd"/>
+
+    <extension  point="org.eclipse.ui.newWizards">
+       <category 
+             name="IEC 61499"
+             id="de.netallied.functionblock"/>
+
+    </extension>
+
+
+   <extension
+         id="IEC61499Nature"
+         name="IEC61499 Project Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run class="de.netallied.functionblock.builder.IEC61499Nature"/>
+      </runtime>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/decoration_fbt.png"
+            id="de.tif.jacob.projectbuilder.image1"
+            natureId="de.netallied.functionblock.IEC61499Nature"/>
+   </extension>
+
+</plugin>

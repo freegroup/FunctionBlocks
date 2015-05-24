@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IEC61499 Functionblock Java Editor Plug-in
+Bundle-SymbolicName: de.netallied.functionblock.codeeditor.java;singleton:=true
+Bundle-Version: 1.0.5
+Bundle-Activator: de.netallied.functionblock.codeditor.java.Activator
+Bundle-Vendor: NetAllied
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.jdt.ui,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.workbench.texteditor,
+ de.netallied.functionblock.core
+Eclipse-LazyStart: true
+Bundle-ClassPath: classes/,
+ .

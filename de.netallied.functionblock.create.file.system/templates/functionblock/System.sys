@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE System SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<System Name="{name}" Comment="System Configuration '{name}'" >
+  <Identification Standard="61499-1" />
+  <VersionInfo Organization="NetAllied" Version="0.1" Author="{author}" Date="{date}" Remarks="" />
+  <Application Name="{name}App" >
+    <FBNetwork >
+    </FBNetwork>
+  </Application>
+</System>
+

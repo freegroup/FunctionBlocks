@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="de.tif.jacob.rule" default="castor" basedir=".">
+
+<property name="buildlib.dir" value="./lib"/>
+
+<!-- =================================================================== -->
+<!-- Classpath                                                           -->
+<!-- =================================================================== -->
+<path id="compile.classpath">
+   <fileset dir="${buildlib.dir}">
+	   	<include name="*.jar"/>
+   </fileset>
+</path>
+
+<!-- =================================================================== -->
+<!-- GENERATE THE CASTOR CLASSES WITH THE XSD Schema Definition          -->
+<!-- =================================================================== -->
+<taskdef name="XSDCompiler" classname="org.exolab.castor.tools.XSDCompiler" >
+<classpath>
+   <fileset dir="${buildlib.dir}">
+   	<include name="*.jar"/>
+   </fileset>
+</classpath>	
+</taskdef>
+
+<target name="clean" description="clean the access classes for Ruleset definitions">
+    <!-- remove castor generated classes -->
+    <delete quiet="true" dir="./src/de/netallied/functionblock/model/castor"/>
+</target>
+	
+<target name="castor" depends="clean" description="Create XML to Object Mapper">
+    <XSDCompiler 
+        package="de.netallied.functionblock.model.castor"
+        schema="./castor/LibraryElement.xsd"
+        force="true"
+        destDir="./src">
+    </XSDCompiler>
+</target>
+
+</project>

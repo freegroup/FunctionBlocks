@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+    
+    <objectContribution id="de.netallied.functionblock.contribution1" nameFilter="*.fbt" objectClass="org.eclipse.core.resources.IFile">
+       <menu id="de.netallied.functionblock.menu1"
+             label="IEC 61499"
+             path="additions">
+          <separator name="group1"/>
+       </menu>
+       <action  id="de.netallied.functionblock.generator.fbt.action.CreateJavaClassAction"
+             class="de.netallied.functionblock.generator.fbt.action.GenerateCodeAction"
+             enablesFor="1"
+             icon="icons/generator.png"
+             label="Generate Code"
+             menubarPath="de.netallied.functionblock.menu1/group1"/>
+    </objectContribution>
+
+   </extension>
+
+</plugin>

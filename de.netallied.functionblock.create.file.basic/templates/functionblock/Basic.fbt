@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FBType SYSTEM "http://www.holobloc.com/xml/LibraryElement.dtd" >
+<FBType Name="{name}" Comment="{name} Function Block Type" >
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="NetAllied" Version="0.1" Author="{author}" Date="{date}" />
+  <CompilerInfo header="package fb.rt.template;" >
+  </CompilerInfo>
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request" >
+        <With Var="QI" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request" >
+        <With Var="QI" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm" >
+        <With Var="QO" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation" >
+        <With Var="QO" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC >
+      <ECState Name="START" Comment="Initial State" x="100" y="100" >
+      </ECState>
+    </ECC>
+  <Algorithm Name="INIT" Comment="Init algorithm" >
+    <ST Text="" />
+  </Algorithm>
+  </BasicFB>
+</FBType>

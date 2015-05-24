@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension  point="org.eclipse.ui.newWizards">
+             
+       <wizard
+             class="de.netallied.functionblock.create.project.blank.NewProjectWizard"
+             icon="icons/project.png"
+             category="de.netallied.functionblock"
+             project="true"
+             name="Blank Project"
+             id="de.netallied.functionblock.projectbuilder.blank.NewProjectWizard"/>
+
+    </extension>
+
+</plugin>

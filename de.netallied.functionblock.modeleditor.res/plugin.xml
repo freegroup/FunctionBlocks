@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension point="org.eclipse.ui.editors">
+
+      <editor
+            class="de.netallied.functionblock.modeleditor.res.editor.MultiPageEditor"
+            extensions="res"
+            icon="icons/editor.png"
+            id="de.netallied.functionblock.editor.res.MultiPageEditor"
+            name="Resource Editor">
+      </editor>
+
+   </extension>
+
+
+	<extension point="org.eclipse.ui.popupMenus">
+   
+  </extension>
+
+</plugin>

@@ -1,0 +1,147 @@
+/**************************************************************************
+ * Project  : jacob.$application.name
+ * Date     : $date
+ * 
+ * THIS IS A GENERATED FILE - DO NOT CHANGE!
+ *
+ *************************************************************************/
+package test;
+
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.UIManager;
+import javax.swing.WindowConstants;
+
+import iec61499.runtime.*;
+import iec61499.runtime.datatype.*;
+
+public final class $StringUtils.capitalise($model.functionBlockModel.name) extends BasicFunctionBlock
+{
+#foreach( $input in $model.functionBlockModel.inputEventModels )
+   public final EVENT  $input.name.toUpperCase();  
+#end
+#foreach( $output in $model.functionBlockModel.outputEventModels )
+   public final EVENT  $output.name.toUpperCase();  
+#end
+#foreach( $input in $model.functionBlockModel.inputValueModels )
+   public final $input.type $input.name.toUpperCase();  
+#end
+#foreach( $output in $model.functionBlockModel.outputValueModels )
+   public final $output.type $output.name.toUpperCase();  
+#end
+
+	// Variables
+#foreach( $var in $model.functionBlockModel.variables )
+   public final $var.type $var.name;  
+#end
+
+	public $StringUtils.capitalise($model.functionBlockModel.name)()
+	{
+		super("$StringUtils.capitalise($model.functionBlockModel.name)");
+#foreach( $var in $model.functionBlockModel.variables )
+   	$var.name = new ${var.type}(this,"$var.name",true);  ;  
+#end
+#foreach( $input in $model.functionBlockModel.inputEventModels )
+		$input.name.toUpperCase() = new EVENT(this, "$input.name",true);  
+#end
+#foreach( $output in $model.functionBlockModel.outputEventModels )
+		$output.name.toUpperCase() = new EVENT(this,"$output.name",false);  
+#end
+#foreach( $input in $model.functionBlockModel.inputValueModels )
+		$input.name.toUpperCase() = new ${input.type}(this,"$input.name",true);  
+#end
+#foreach( $output in $model.functionBlockModel.outputValueModels )
+		$output.name.toUpperCase() = new ${output.type}(this,"$output.name",false);  
+#end
+	}
+	
+	public void tick()
+	{
+		// Alle Eingaenge ueberpruefen und eventuell die Zugehoerigen WITH Eingaenge uebernehmen
+		// (commit)
+#foreach( $input in $model.functionBlockModel.inputEventModels )
+		if(${input.name.toUpperCase()}.getValue()==true)
+		{
+#foreach( $with in $input.withElements )
+			${with.name.toUpperCase()}.commit();
+#end
+		}
+#end
+
+		// Alles Ausgaenge zuruecksetzten
+		//
+#foreach( $output in $model.functionBlockModel.outputEventModels )
+		${output.name.toUpperCase()}.setValue(false);
+#end
+
+
+#foreach( $state in $model.functionBlockModel.eCCDiagramModel.elements )
+		if("$state.name".equals(currentState))
+		{
+#foreach( $transition in $state.sourceConnections )
+			if(checkCondition_${transition.id}())
+			{
+#foreach( $action in $transition.target.elements )
+				${action.algorithmName}();
+				// Alle WITH Werte des Ausganges uebenehmen und nach aussen durchschalten
+				//
+				${action.output}.setValue(true);
+				// Es wird ein Ausgang gesetzt => es muessen alle WITH Elemente uebernommen werden
+				//
+#foreach( $with in $action.getOutputModel().withElements )
+				${with.name.toUpperCase()}.commit();
+#end
+
+				resetInputEvents();
+#end
+				currentState = "$transition.target.name";
+				return;
+			}
+#end
+			return;
+		}
+#end
+	}	
+
+#foreach( $transition in $model.functionBlockModel.eCCDiagramModel.transitionModels )
+   protected final boolean checkCondition_${transition.id}()
+   {
+   		return $JavaUtils.toJava($transition.condition);
+   }
+   
+#end
+
+
+#foreach( $algorithm in $model.functionBlockModel.algorithms )
+   protected final void ${algorithm.name}()
+   {
+   	$algorithm.code
+   }
+#end
+
+	/**
+	 *
+	 * ONLY FOR TEST PURPOSE
+	 *
+	 **/
+   public static void main(String[] args) 
+   {
+     try 
+     {
+       UIManager.setLookAndFeel("com.jgoodies.looks.plastic.PlasticXPLookAndFeel");
+     } 
+     catch (Exception e) 
+     {
+         // Likely PlasticXP is not in the class path; ignore.
+     }
+     JFrame frame = new JFrame();
+     $StringUtils.capitalise($model.functionBlockModel.name) fb =new $StringUtils.capitalise($model.functionBlockModel.name) ();
+     frame.setTitle("Functionblock Test Enviroment");
+     frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+     JComponent panel = fb.buildPanel();
+     frame.getContentPane().add(panel);
+     frame.pack();
+     new Thread(fb).start();
+     frame.setVisible(true);
+   }
+}

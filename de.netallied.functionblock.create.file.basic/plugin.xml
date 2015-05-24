@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+    <extension  point="org.eclipse.ui.newWizards">
+
+      <wizard  name="Basic Function Block"
+            icon="icons/file.png"
+            category="de.netallied.functionblock"
+            class="de.netallied.functionblock.create.file.basic.NewWizard"
+            id="de.netallied.functionblock.create.file.basic.NewWizard">
+      </wizard>
+
+   </extension>
+
+</plugin>

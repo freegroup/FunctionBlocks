@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="templates/runtime/java"/>
+	<classpathentry exported="true" kind="lib" path="classes/"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-collections.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-discovery.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-lang.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-logging.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-validator-1.1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/velocity-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/velocity-dep-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/forms-1.0.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

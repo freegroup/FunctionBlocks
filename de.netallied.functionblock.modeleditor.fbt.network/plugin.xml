@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="de.netallied.functionblock.core.fbtEditorParts">
+      <editor
+            class="de.netallied.functionblock.modeleditor.fbt.network.Editor"
+            type="composite"
+            sortIndex="30"/>
+   </extension>
+
+	<extension point="org.eclipse.ui.popupMenus">
+   
+  <objectContribution objectClass="de.netallied.functionblock.modeleditor.fbt.network.editpart.InputEventModelEditPart"
+          id="de.netallied.functionblock.modeleditor.fbt.network.editpart.InputEventModelEditPart">
+
+       <action 
+             class="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectInputEventWithParentPortAction"
+             icon="icons/editor_code.gif"
+             id="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectInputEventWithParentPortAction"
+             label="%popup.connect"
+             menubarPath="org.eclipse.gef.group.edit">
+       </action>
+        <visibility>
+         <objectState name="fanIn" value="1"/>
+        </visibility>
+    </objectContribution>
+
+    <objectContribution
+          objectClass="de.netallied.functionblock.modeleditor.fbt.network.editpart.OutputEventModelEditPart"
+          id="de.netallied.functionblock.modeleditor.fbt.network.editpart.OutputEventModelEditPart">
+
+       <action
+          label="%popup.connect"
+          icon="icons/editor_code.gif"
+          class="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectOutputEventWithParentPortAction"
+          menubarPath="org.eclipse.gef.group.edit"
+          id="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectOutputEventWithParentPortAction"/>
+        <visibility>
+         <objectState name="fanIn" value="1"/>
+        </visibility>
+    </objectContribution>
+
+
+    <objectContribution
+          objectClass="de.netallied.functionblock.modeleditor.fbt.network.editpart.InputValueModelEditPart"
+          id="de.netallied.functionblock.modeleditor.fbt.network.editpart.InputValueModelEditPart">
+
+       <action
+          label="%popup.connect"
+          icon="icons/editor_code.gif"
+          class="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectInputValueWithParentPortAction"
+          menubarPath="org.eclipse.gef.group.edit"
+          id="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectInputValueWithParentPortAction"/>
+        <visibility>
+         <objectState name="fanIn" value="1"/>
+        </visibility>
+    </objectContribution>
+
+    <objectContribution
+          objectClass="de.netallied.functionblock.modeleditor.fbt.network.editpart.OutputValueModelEditPart"
+          id="de.netallied.functionblock.modeleditor.fbt.network.editpart.OutputValueModelEditPart">
+
+       <action
+          label="%popup.connect"
+          icon="icons/editor_code.gif"
+          class="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectOutputValueWithParentPortAction"
+          menubarPath="org.eclipse.gef.group.edit"
+          id="de.netallied.functionblock.modeleditor.fbt.network.action.ConnectOutputValueWithParentPortAction"/>
+        <visibility>
+         <objectState name="fanIn" value="1"/>
+        </visibility>
+    </objectContribution>
+  </extension>
+</plugin>

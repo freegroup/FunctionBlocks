@@ -1,0 +1,401 @@
+/*
+ * This class was automatically generated with 
+ * <a href="http://www.castor.org">Castor 0.9.6</a>, using an XML
+ * Schema.
+ * $Id: ECTransitionDescriptor.java,v 1.3 2007/02/14 19:23:01 freegroup Exp $
+ */
+
+package de.netallied.functionblock.model.castor;
+
+  //---------------------------------/
+ //- Imported classes and packages -/
+//---------------------------------/
+
+import org.exolab.castor.mapping.AccessMode;
+import org.exolab.castor.xml.TypeValidator;
+import org.exolab.castor.xml.XMLFieldDescriptor;
+import org.exolab.castor.xml.validators.*;
+
+/**
+ * Class ECTransitionDescriptor.
+ * 
+ * @version $Revision: 1.3 $ $Date: 2007/02/14 19:23:01 $
+ */
+public class ECTransitionDescriptor extends org.exolab.castor.xml.util.XMLClassDescriptorImpl {
+
+
+      //--------------------------/
+     //- Class/Member Variables -/
+    //--------------------------/
+
+    /**
+     * Field nsPrefix
+     */
+    private java.lang.String nsPrefix;
+
+    /**
+     * Field nsURI
+     */
+    private java.lang.String nsURI;
+
+    /**
+     * Field xmlName
+     */
+    private java.lang.String xmlName;
+
+    /**
+     * Field identity
+     */
+    private org.exolab.castor.xml.XMLFieldDescriptor identity;
+
+
+      //----------------/
+     //- Constructors -/
+    //----------------/
+
+    public ECTransitionDescriptor() {
+        super();
+        xmlName = "ECTransition";
+        org.exolab.castor.xml.util.XMLFieldDescriptorImpl  desc           = null;
+        org.exolab.castor.xml.XMLFieldHandler              handler        = null;
+        org.exolab.castor.xml.FieldValidator               fieldValidator = null;
+        //-- initialize attribute descriptors
+        
+        //-- _source
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_source", "Source", org.exolab.castor.xml.NodeType.Attribute);
+        desc.setImmutable(true);
+        handler = (new org.exolab.castor.xml.XMLFieldHandler() {
+            public java.lang.Object getValue( java.lang.Object object ) 
+                throws IllegalStateException
+            {
+                ECTransition target = (ECTransition) object;
+                return target.getSource();
+            }
+            public void setValue( java.lang.Object object, java.lang.Object value) 
+                throws IllegalStateException, IllegalArgumentException
+            {
+                try {
+                    ECTransition target = (ECTransition) object;
+                    target.setSource( (java.lang.String) value);
+                }
+                catch (java.lang.Exception ex) {
+                    throw new IllegalStateException(ex.toString());
+                }
+            }
+            public java.lang.Object newInstance( java.lang.Object parent ) {
+                return null;
+            }
+        } );
+        desc.setHandler(handler);
+        desc.setRequired(true);
+        addFieldDescriptor(desc);
+        
+        //-- validation code for: _source
+        fieldValidator = new org.exolab.castor.xml.FieldValidator();
+        fieldValidator.setMinOccurs(1);
+        { //-- local scope
+            StringValidator typeValidator = new StringValidator();
+            typeValidator.setWhiteSpace("preserve");
+            fieldValidator.setValidator(typeValidator);
+        }
+        desc.setValidator(fieldValidator);
+        //-- _destination
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_destination", "Destination", org.exolab.castor.xml.NodeType.Attribute);
+        desc.setImmutable(true);
+        handler = (new org.exolab.castor.xml.XMLFieldHandler() {
+            public java.lang.Object getValue( java.lang.Object object ) 
+                throws IllegalStateException
+            {
+                ECTransition target = (ECTransition) object;
+                return target.getDestination();
+            }
+            public void setValue( java.lang.Object object, java.lang.Object value) 
+                throws IllegalStateException, IllegalArgumentException
+            {
+                try {
+                    ECTransition target = (ECTransition) object;
+                    target.setDestination( (java.lang.String) value);
+                }
+                catch (java.lang.Exception ex) {
+                    throw new IllegalStateException(ex.toString());
+                }
+            }
+            public java.lang.Object newInstance( java.lang.Object parent ) {
+                return null;
+            }
+        } );
+        desc.setHandler(handler);
+        desc.setRequired(true);
+        addFieldDescriptor(desc);
+        
+        //-- validation code for: _destination
+        fieldValidator = new org.exolab.castor.xml.FieldValidator();
+        fieldValidator.setMinOccurs(1);
+        { //-- local scope
+            StringValidator typeValidator = new StringValidator();
+            typeValidator.setWhiteSpace("preserve");
+            fieldValidator.setValidator(typeValidator);
+        }
+        desc.setValidator(fieldValidator);
+        //-- _condition
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_condition", "Condition", org.exolab.castor.xml.NodeType.Attribute);
+        desc.setImmutable(true);
+        handler = (new org.exolab.castor.xml.XMLFieldHandler() {
+            public java.lang.Object getValue( java.lang.Object object ) 
+                throws IllegalStateException
+            {
+                ECTransition target = (ECTransition) object;
+                return target.getCondition();
+            }
+            public void setValue( java.lang.Object object, java.lang.Object value) 
+                throws IllegalStateException, IllegalArgumentException
+            {
+                try {
+                    ECTransition target = (ECTransition) object;
+                    target.setCondition( (java.lang.String) value);
+                }
+                catch (java.lang.Exception ex) {
+                    throw new IllegalStateException(ex.toString());
+                }
+            }
+            public java.lang.Object newInstance( java.lang.Object parent ) {
+                return null;
+            }
+        } );
+        desc.setHandler(handler);
+        desc.setRequired(true);
+        addFieldDescriptor(desc);
+        
+        //-- validation code for: _condition
+        fieldValidator = new org.exolab.castor.xml.FieldValidator();
+        fieldValidator.setMinOccurs(1);
+        { //-- local scope
+            StringValidator typeValidator = new StringValidator();
+            typeValidator.setWhiteSpace("preserve");
+            fieldValidator.setValidator(typeValidator);
+        }
+        desc.setValidator(fieldValidator);
+        //-- _comment
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(java.lang.String.class, "_comment", "Comment", org.exolab.castor.xml.NodeType.Attribute);
+        desc.setImmutable(true);
+        handler = (new org.exolab.castor.xml.XMLFieldHandler() {
+            public java.lang.Object getValue( java.lang.Object object ) 
+                throws IllegalStateException
+            {
+                ECTransition target = (ECTransition) object;
+                return target.getComment();
+            }
+            public void setValue( java.lang.Object object, java.lang.Object value) 
+                throws IllegalStateException, IllegalArgumentException
+            {
+                try {
+                    ECTransition target = (ECTransition) object;
+                    target.setComment( (java.lang.String) value);
+                }
+                catch (java.lang.Exception ex) {
+                    throw new IllegalStateException(ex.toString());
+                }
+            }
+            public java.lang.Object newInstance( java.lang.Object parent ) {
+                return null;
+            }
+        } );
+        desc.setHandler(handler);
+        addFieldDescriptor(desc);
+        
+        //-- validation code for: _comment
+        fieldValidator = new org.exolab.castor.xml.FieldValidator();
+        { //-- local scope
+            StringValidator typeValidator = new StringValidator();
+            typeValidator.setWhiteSpace("preserve");
+            fieldValidator.setValidator(typeValidator);
+        }
+        desc.setValidator(fieldValidator);
+        //-- _x
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(float.class, "_x", "x", org.exolab.castor.xml.NodeType.Attribute);
+        handler = (new org.exolab.castor.xml.XMLFieldHandler() {
+            public java.lang.Object getValue( java.lang.Object object ) 
+                throws IllegalStateException
+            {
+                ECTransition target = (ECTransition) object;
+                if(!target.hasX())
+                    return null;
+                return new java.lang.Float(target.getX());
+            }
+            public void setValue( java.lang.Object object, java.lang.Object value) 
+                throws IllegalStateException, IllegalArgumentException
+            {
+                try {
+                    ECTransition target = (ECTransition) object;
+                    // if null, use delete method for optional primitives 
+                    if (value == null) {
+                        target.deleteX();
+                        return;
+                    }
+                    target.setX( ((java.lang.Float)value).floatValue());
+                }
+                catch (java.lang.Exception ex) {
+                    throw new IllegalStateException(ex.toString());
+                }
+            }
+            public java.lang.Object newInstance( java.lang.Object parent ) {
+                return null;
+            }
+        } );
+        desc.setHandler(handler);
+        addFieldDescriptor(desc);
+        
+        //-- validation code for: _x
+        fieldValidator = new org.exolab.castor.xml.FieldValidator();
+        { //-- local scope
+            FloatValidator typeValidator = new FloatValidator();
+            fieldValidator.setValidator(typeValidator);
+        }
+        desc.setValidator(fieldValidator);
+        //-- _y
+        desc = new org.exolab.castor.xml.util.XMLFieldDescriptorImpl(float.class, "_y", "y", org.exolab.castor.xml.NodeType.Attribute);
+        handler = (new org.exolab.castor.xml.XMLFieldHandler() {
+            public java.lang.Object getValue( java.lang.Object object ) 
+                throws IllegalStateException
+            {
+                ECTransition target = (ECTransition) object;
+                if(!target.hasY())
+                    return null;
+                return new java.lang.Float(target.getY());
+            }
+            public void setValue( java.lang.Object object, java.lang.Object value) 
+                throws IllegalStateException, IllegalArgumentException
+            {
+                try {
+                    ECTransition target = (ECTransition) object;
+                    // if null, use delete method for optional primitives 
+                    if (value == null) {
+                        target.deleteY();
+                        return;
+                    }
+                    target.setY( ((java.lang.Float)value).floatValue());
+                }
+                catch (java.lang.Exception ex) {
+                    throw new IllegalStateException(ex.toString());
+                }
+            }
+            public java.lang.Object newInstance( java.lang.Object parent ) {
+                return null;
+            }
+        } );
+        desc.setHandler(handler);
+        addFieldDescriptor(desc);
+        
+        //-- validation code for: _y
+        fieldValidator = new org.exolab.castor.xml.FieldValidator();
+        { //-- local scope
+            FloatValidator typeValidator = new FloatValidator();
+            fieldValidator.setValidator(typeValidator);
+        }
+        desc.setValidator(fieldValidator);
+        //-- initialize element descriptors
+        
+    } //-- de.netallied.functionblock.model.castor.ECTransitionDescriptor()
+
+
+      //-----------/
+     //- Methods -/
+    //-----------/
+
+    /**
+     * Method getAccessMode
+     * 
+     * 
+     * 
+     * @return AccessMode
+     */
+    public org.exolab.castor.mapping.AccessMode getAccessMode()
+    {
+        return null;
+    } //-- org.exolab.castor.mapping.AccessMode getAccessMode() 
+
+    /**
+     * Method getExtends
+     * 
+     * 
+     * 
+     * @return ClassDescriptor
+     */
+    public org.exolab.castor.mapping.ClassDescriptor getExtends()
+    {
+        return null;
+    } //-- org.exolab.castor.mapping.ClassDescriptor getExtends() 
+
+    /**
+     * Method getIdentity
+     * 
+     * 
+     * 
+     * @return FieldDescriptor
+     */
+    public org.exolab.castor.mapping.FieldDescriptor getIdentity()
+    {
+        return identity;
+    } //-- org.exolab.castor.mapping.FieldDescriptor getIdentity() 
+
+    /**
+     * Method getJavaClass
+     * 
+     * 
+     * 
+     * @return Class
+     */
+    public java.lang.Class getJavaClass()
+    {
+        return de.netallied.functionblock.model.castor.ECTransition.class;
+    } //-- java.lang.Class getJavaClass() 
+
+    /**
+     * Method getNameSpacePrefix
+     * 
+     * 
+     * 
+     * @return String
+     */
+    public java.lang.String getNameSpacePrefix()
+    {
+        return nsPrefix;
+    } //-- java.lang.String getNameSpacePrefix() 
+
+    /**
+     * Method getNameSpaceURI
+     * 
+     * 
+     * 
+     * @return String
+     */
+    public java.lang.String getNameSpaceURI()
+    {
+        return nsURI;
+    } //-- java.lang.String getNameSpaceURI() 
+
+    /**
+     * Method getValidator
+     * 
+     * 
+     * 
+     * @return TypeValidator
+     */
+    public org.exolab.castor.xml.TypeValidator getValidator()
+    {
+        return this;
+    } //-- org.exolab.castor.xml.TypeValidator getValidator() 
+
+    /**
+     * Method getXMLName
+     * 
+     * 
+     * 
+     * @return String
+     */
+    public java.lang.String getXMLName()
+    {
+        return xmlName;
+    } //-- java.lang.String getXMLName() 
+
+}

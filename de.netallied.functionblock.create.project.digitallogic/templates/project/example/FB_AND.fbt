@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<FBType Comment="Boolean AND" Name="FB_AND" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="FBType">
+  <Identification Classification="Boolean functions" Standard="61499-1-D.1"/>
+  <VersionInfo Author="JHC" Date="2001-08-05" Organization="Rockwell Automation" Remarks="XML version" Version="0.1"/>
+  <VersionInfo Author="JHC" Date="1999-02-20" Organization="Rockwell Automation" Remarks="SRC version" Version="0.0"/>
+  <CompilerInfo classdef="class FB_AND extends FBFunction2" header="package fb.rt.math;">
+    <Compiler Language="Java" Product="VisualAge" Vendor="IBM" Version="3.0"/>
+  </CompilerInfo>
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="REQ">
+        <With Var="IN1"/>
+        <With Var="IN2"/>
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="CNF">
+        <With Var="OUT"/>
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="IN1" Type="BOOL"/>
+      <VarDeclaration Name="IN2" Type="BOOL"/>
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Comment="Result" Name="OUT" Type="BOOL"/>
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" x="257.0" y="89.0"/>
+      <ECState Name="CALCULATE" x="243.0" y="254.0">
+        <ECAction Algorithm="REQ" Output="CNF"/>
+      </ECState>
+      <ECTransition Condition="REQ" Destination="CALCULATE" Source="START" x="337.0" y="194.0"/>
+      <ECTransition Condition="1" Destination="START" Source="CALCULATE" x="251.0" y="198.0"/>
+    </ECC>
+    <Algorithm Name="REQ">
+      <Other Language="JAVA" Text="OUT.setValue(IN1.getValue()&amp;IN2.getValue());"/>
+    </Algorithm>
+  </BasicFB>
+</FBType>

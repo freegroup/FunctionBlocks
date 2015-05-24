@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="de.netallied.functionblock.core.codeEditors">
+	   <factory class="de.netallied.functionblock.codeeditor.st.CodeEditorFactory" language="st">
+	   </factory>
+   </extension>
+</plugin>
+
